@@ -1,0 +1,14 @@
+{
+  "name": "Spaceship",
+  "version": "1.0.0",
+  "identifier": "foh.spaceship",
+  "description": "A shuttle like plugin",
+  "icon": "icon.png",
+  "createdBy": "Lifesign",
+  "website": "https://github.com/FriendsOfHere/spaceship",
+  "appcast": "https://raw.githubusercontent.com/FriendsOfHere/spaceship/master/src/appcast.xml",
+  "script": "index.js",
+  "defaultCategory": "fav",
+  "displayOn": ["mini"], 
+  "preferences": [] 
+}
