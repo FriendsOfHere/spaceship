@@ -1,0 +1,24 @@
+{
+  "_comments": [
+    "Valid editor value: {default}, {vi}, {nano}, {subl} or another terminal based editor.",
+    "Cabins only support one-level menu, can't nested for now",
+    "Cabin Type: {app}, {url}, {cmd}"
+  ],
+  "editor": "default",
+  "cabins": [
+    {
+      "name": "Grep Test",
+      "cmd": "ps aux | grep defaults"
+    },
+    {
+      "name": "打开 Typory 主题文件夹",
+      "cmd": "open /Users/$(whoami)/Library/Application*Support/abnerworks.Typora/themes"
+    },
+    {
+      "cmd": "ssh bwg",
+      "name": "ssh@bwg11"
+    }
+  ]
+}
+
+
