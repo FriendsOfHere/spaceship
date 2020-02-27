@@ -25,6 +25,28 @@ function ensureConfigExists() {
   }).catch((err) => {console.log(`config init error: ${err}`)})
 }
 
+function executeCmdType(payload) {
+  here.exec(`osascript -e '
+tell application "Terminal"
+  reopen
+  activate
+  do script "${payload}" in front window
+end tell
+'`)
+    .then((output) => {
+      console.log(`[Carbin Execute][type:cmd] output: ${output}`)
+    })
+    .catch((err) => {console.log(`Carbin Execute][type:cmd] error: ${output}`)})
+}
+
+function executeAppType(payload) {
+  here.exec(`open -a ${payload}`)
+    .then((output) => {
+      console.log(`[Carbin Execute][type:app] output: ${output}`)
+    })
+    .catch((err) => {console.log(`[Carbin Execute][type:app] error: ${output}`)})
+}
+
 function setupSpaceship() {
   console.log('setup begin ........')
 
@@ -37,18 +59,15 @@ cat ${homeDir}/${spaceshipConfName}
       return {
         title: cabin.name,
         onClick: () => {
-          console.log(`executing single cabin.cmd ${cabin.cmd}`)
-          here.exec(`osascript -e '
-tell application "Terminal"
-  reopen
-  activate
-  do script "${cabin.cmd}" in front window
-end tell
-'`)
-          .then((output) => {
-            console.log(`cabin execute cmd output: ${output}`)
-          })
-          .catch((err) => {console.log(`cabin execute cmd error: ${output}`)})
+          console.log(cabin)
+          //smart execute
+          if (typeof cabin.type == "undefined" || cabin.type == "cmd") {
+            executeCmdType(cabin.payload)
+          } else if (cabin.type == "app")  {
+            executeAppType(cabin.payload)
+          } else {
+            here.systemNotification(`不支持的 Cabin 类型`, `目前仅支持 cmd, app 类型`)
+          }
         }
       }
     })
