@@ -47,6 +47,20 @@ function executeAppType(payload) {
     .catch((err) => {console.log(`[Carbin Execute][type:app] error: ${output}`)})
 }
 
+function getImageUrlByType(cabin) {
+  let imageUrl = ''
+  if (typeof cabin.type == "undefined" || cabin.type == "cmd") {
+    imageUrl = 'cli.png'
+  } else if (cabin.type == "app")  {
+    imageUrl = 'mac.png'
+  } else {
+    imageUrl = 'q.png'
+  }
+
+  return imageUrl
+}
+
+
 function setupSpaceship() {
   console.log('setup begin ........')
 
@@ -68,7 +82,11 @@ cat ${homeDir}/${spaceshipConfName}
           } else {
             here.systemNotification(`不支持的 Cabin 类型`, `目前仅支持 cmd, app 类型`)
           }
-        }
+        },
+        accessory: {
+            imageURL: getImageUrlByType(cabin),
+            imageCornerRadius: 4
+          }
       }
     })
 
