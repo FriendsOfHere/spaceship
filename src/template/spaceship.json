@@ -23,6 +23,11 @@
     {
       "name": "ssh@github",
       "payload": "ssh yourGithubName"
+    },
+    {
+      "name": "Unsupported Type",
+      "payload": "",
+      "type": "xxx"
     }
   ]
 }
