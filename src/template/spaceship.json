@@ -1,22 +1,28 @@
 {
   "_comments": [
-    "Valid editor value: {default}, {vi}, {nano}, {subl} or another terminal based editor.",
-    "Cabins only support one-level menu, can't nested for now",
-    "Cabin Type: {app}, {url}, {cmd}"
+    "Valid editor value: {default}, {vi}, {nano}, {subl} or other editor which is valid in cli",
+    "Cabins only support one-level menu, nested menu need `here` API",
+    "Cabin Type: {cmd}<-default value, can be omitted; {app}<- Application Name"
   ],
   "editor": "default",
   "cabins": [
     {
-      "name": "Grep Test",
-      "cmd": "ps aux | grep defaults"
+      "name": "Open Safari",
+      "payload": "Safari.app",
+      "type": "app"
     },
     {
-      "name": "打开 Typory 主题文件夹",
-      "cmd": "open /Users/$(whoami)/Library/Application*Support/abnerworks.Typora/themes"
+      "name": "Ps with cabin type omitted",
+      "payload": "ps aux | grep Here"
     },
     {
-      "cmd": "ssh bwg",
-      "name": "ssh@bwg11"
+      "name": "Open Here plugin directory",
+      "payload": "open /Users/$(whoami)/Library/Application*Support/app.here/Plugins",
+      "type": "cmd"
+    },
+    {
+      "name": "ssh@github",
+      "payload": "ssh yourGithubName"
     }
   ]
 }

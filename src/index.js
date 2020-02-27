@@ -27,7 +27,7 @@ function ensureConfigExists() {
 
 function setupSpaceship() {
   console.log('setup begin ........')
-  //cat ~/.spaceship.json
+
   here.exec(`
 cat ${homeDir}/${spaceshipConfName}
 `).then((output) => {
@@ -37,7 +37,7 @@ cat ${homeDir}/${spaceshipConfName}
       return {
         title: cabin.name,
         onClick: () => {
-          console.log(cabin.cmd)
+          console.log(`executing single cabin.cmd ${cabin.cmd}`)
           here.exec(`osascript -e '
 tell application "Terminal"
   reopen
