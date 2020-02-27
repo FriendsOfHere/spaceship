@@ -1,6 +1,6 @@
 {
   "_comments": [
-    "Valid editor value: {default}, {vi}, {nano}, {subl} or other editor which is valid in cli",
+    "Valid editor value: {default}, {vi}, {vim}, {nano}, {subl}, {code} or other editor which is valid in cli",
     "Cabins only support one-level menu, nested menu need `here` API",
     "Cabin Type: {cmd}<-default value, can be omitted; {app}<- Application Name"
   ],
@@ -12,7 +12,7 @@
       "type": "app"
     },
     {
-      "name": "Ps with cabin type omitted",
+      "name": "PS with cabin type omitted",
       "payload": "ps aux | grep Here"
     },
     {
@@ -25,7 +25,7 @@
       "payload": "ssh yourGithubName"
     },
     {
-      "name": "Unsupported Type",
+      "name": "Unsupported cabin type",
       "payload": "",
       "type": "xxx"
     }
