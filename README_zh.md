@@ -26,7 +26,7 @@
 - 保存完毕后，重启 `here` 或者重载 `spaceship` 即可生效
 
 ## 配置选项
-> 查看 `./src/template/spaceship.json` 文件中的 `_comments` 部分，里面有详细说明
+查看 [spaceship json template](./src/template/spaceship.json) 文件中的 `_comments` 部分，里面有详细说明
 
 ## License
 This plugin is published under the [MIT License](./LICENSE.md)

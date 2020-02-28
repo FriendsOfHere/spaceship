@@ -28,7 +28,7 @@
 - Save & Restart `here` or Reload `spaceship`
 
 ## Configuration options
-> see `_comments` section in `./src/template/spaceship.json`
+see `_comments` section in [spaceship json template](./src/template/spaceship.json)
 
 ## License
 This plugin is published under the [MIT License](./LICENSE.md)
