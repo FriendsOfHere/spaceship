@@ -2,7 +2,9 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> A [Here](https://here.app) plugin. A shuttle like plugin
+![screenshot](./media/screenshot.png)
+
+> A simple shortcut [Here](https://here.app) plugin. inspired by shuttle
 
 [中文说明](./README_zh.md)
 
@@ -17,10 +19,16 @@
 2. Download the latest release & double click the `Spaceship.hereplugin`
 
 ## Feature
-- TBD
+- Add your own shortcuts
+- Easy configuration file
+- Support different type of shortcuts
 
 ## Usage
-- TBD
+- Enable the plugin and click `spaceship` in mini window to quick edit `~/.spaceship.json`
+- Save & Restart `here` or Reload `spaceship`
+
+## Configuration options
+> see `_comments` section in `./src/template/spaceship.json`
 
 ## License
 This plugin is published under the [MIT License](./LICENSE.md)
