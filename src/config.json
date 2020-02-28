@@ -9,6 +9,6 @@
   "appcast": "https://raw.githubusercontent.com/FriendsOfHere/spaceship/master/src/appcast.xml",
   "script": "index.js",
   "defaultCategory": "fav",
-  "displayOn": ["mini"], 
+  "displayOn": ["mini", "menuBar"], 
   "preferences": [] 
 }

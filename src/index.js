@@ -79,6 +79,10 @@ cat ${homeDir}/${spaceshipConfName}
     // TODO check json syntax
     console.error(err)
   })
+
+  //add menu bar support
+  here.setMenuBar({title: `Spaceship Ready..`})
+
 }
 
 function executeCmdType(payload) {
