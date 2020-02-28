@@ -30,7 +30,7 @@
       "payload": "ssh yourGithubName"
     },
     {
-      "name": "Unsupported cabin type",
+      "name": "Unsupported cabin type example",
       "payload": "",
       "type": "xxx"
     }
