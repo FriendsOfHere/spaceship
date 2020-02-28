@@ -4,7 +4,7 @@
     "Cabins only support one-level menu, nested menu need `here` API",
     "Cabin Type: {cmd}<-default value, can be omitted; {app}<- Application Name"
   ],
-  "editor": "default",
+  "editor": "nano",
   "cabins": [
     {
       "name": "Open Safari",
