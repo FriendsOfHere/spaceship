@@ -28,6 +28,8 @@ function ensureConfigExists() {
 function setupSpaceship() {
   console.log('setup begin ........')
 
+  here.setMiniWindow({title: `Spaceship Loading..`})
+
   here.exec(`
 cat ${homeDir}/${spaceshipConfName}
 `).then((output) => {
@@ -37,14 +39,14 @@ cat ${homeDir}/${spaceshipConfName}
       return {
         title: cabin.name,
         onClick: () => {
-          console.log(cabin)
+          console.log(JSON.stringify(cabin))
           //smart execute
           if (typeof cabin.type == "undefined" || cabin.type == "cmd") {
             executeCmdType(cabin.payload)
           } else if (cabin.type == "app")  {
             executeAppType(cabin.payload)
           } else {
-            here.systemNotification(`不支持的 Cabin 类型`, `目前仅支持 cmd, app 类型`)
+            here.systemNotification(`不支持的 Cabin 类型`, `目前仅支持 cmd, app 类型，请重新修改配置文件`)
           }
         },
         accessory: {
@@ -55,8 +57,8 @@ cat ${homeDir}/${spaceshipConfName}
     })
 
     here.setMiniWindow({
-        title: `Spaceship Loading..`,
-        detail: "Click to Edit Config",
+        title: `Spaceship Ready..`,
+        detail: "点击此处修改配置文件",
         onClick: () => {
           //quick open .spaceship.json
           here.exec(`${getEditConfigExecution(config.editor)}`)
@@ -86,17 +88,17 @@ tell application "Terminal"
 end tell
 '`)
     .then((output) => {
-      console.log(`[Carbin Execute][type:cmd] output: ${output}`)
+      console.log(`[Cabin Execute][type:cmd] output: ${output}`)
     })
-    .catch((err) => {console.log(`Carbin Execute][type:cmd] error: ${output}`)})
+    .catch((err) => {console.log(`Cabin Execute][type:cmd] error: ${output}`)})
 }
 
 function executeAppType(payload) {
   here.exec(`open -a ${payload}`)
     .then((output) => {
-      console.log(`[Carbin Execute][type:app] output: ${output}`)
+      console.log(`[Cabin Execute][type:app] output: ${output}`)
     })
-    .catch((err) => {console.log(`[Carbin Execute][type:app] error: ${output}`)})
+    .catch((err) => {console.log(`[Cabin Execute][type:app] error: ${output}`)})
 }
 
 function getImageUrlByType(cabin) {
