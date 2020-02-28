@@ -64,7 +64,9 @@ cat ${homeDir}/${spaceshipConfName}
           here.exec(`${getEditConfigExecution(config.editor)}`)
               .then((output) => {
                 console.log(`open config file: output: ${output}`)
-                here.systemNotification(`温馨提醒`, `变更配置后请重启 Here 或者重载 Spaceship 插件生效`)
+                _.delay(() => {
+                  here.systemNotification(`温馨提醒`, `变更配置后请重启 Here 或者重载 Spaceship 插件生效`)
+                }, 1000)
               }).catch((err) => {console.log(`open config file error: ${err}`)})
         },
         popOvers: popOvers
