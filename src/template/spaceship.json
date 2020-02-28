@@ -1,11 +1,16 @@
 {
   "_comments": [
-    "Valid editor value: {default}, {vi}, {vim}, {nano}, {subl}, {code} or other editor which is valid in cli",
+    "Valid editor value: {default}, {vi}, {vim}, {nano}, {subl}, {code} or other valid editor cli",
     "Cabins only support one-level menu, nested menu need `here` API",
     "Cabin Type: {cmd}<-default value, can be omitted; {app}<- Application Name"
   ],
   "editor": "nano",
   "cabins": [
+    {
+      "name": "↓↓示例演示，请自行删除调整↓↓",
+      "payload": "",
+      "type": "test"
+    },
     {
       "name": "Open Safari",
       "payload": "Safari.app",
