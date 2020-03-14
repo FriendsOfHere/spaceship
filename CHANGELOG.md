@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/FriendsOfHere/spaceship/compare/v1.0.0...v1.1.0) (2020-03-14)
+
+
+### Features
+
+* add menu bar icon ([e4e3bf2](https://github.com/FriendsOfHere/spaceship/commit/e4e3bf207d5216d0efe3d4c8355efa7fb2d67a46))
+
 ## 1.0.0 (2020-02-28)
 
 
