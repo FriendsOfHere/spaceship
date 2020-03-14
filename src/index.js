@@ -28,7 +28,7 @@ function ensureConfigExists() {
 function setupSpaceship() {
   console.log('setup begin ........')
 
-  here.setMiniWindow({title: `Spaceship Loading..`})
+  here.miniWindow.set({title: `Spaceship Loading..`})
 
   here.exec(`
 cat ${homeDir}/${spaceshipConfName}
@@ -56,7 +56,7 @@ cat ${homeDir}/${spaceshipConfName}
       }
     })
 
-    here.setMiniWindow({
+    here.miniWindow.set({
         title: `Spaceship Ready..`,
         detail: "点击此处修改配置文件",
         onClick: () => {
@@ -81,7 +81,7 @@ cat ${homeDir}/${spaceshipConfName}
   })
 
   //add menu bar support
-  here.setMenuBar({title: `Spaceship Ready..`})
+  here.menuBar.set({title: ''})
 
 }
 
