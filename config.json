@@ -6,7 +6,7 @@
   "icon": "icon.png",
   "createdBy": "Lifesign",
   "website": "https://github.com/FriendsOfHere/spaceship",
-  "appcast": "https://raw.githubusercontent.com/FriendsOfHere/spaceship/master/src/appcast.xml",
+  "appcast": "https://raw.githubusercontent.com/FriendsOfHere/spaceship/master/appcast.xml",
   "script": "index.js",
   "defaultCategory": "fav",
   "displayOn": [

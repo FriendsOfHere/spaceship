@@ -1,7 +1,7 @@
 {
   "bumpFiles": [
     {
-      "filename": "./src/config.json",
+      "filename": "./config.json",
       "type": "json"
     }
   ]
