@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/FriendsOfHere/spaceship/compare/v1.1.0...v1.2.0) (2020-07-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* use new directory structure, support plugin readme
+
+* use new directory structure, support plugin readme ([7a502fe](https://github.com/FriendsOfHere/spaceship/commit/7a502fe2152572673bb9848e1b2d0f5737a37385))
+
 ## [1.1.0](https://github.com/FriendsOfHere/spaceship/compare/v1.0.0...v1.1.0) (2020-03-14)
 
 
