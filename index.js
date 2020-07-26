@@ -69,8 +69,10 @@ cat ${homeDir}/${spaceshipConfName}
                 }, 1000)
               }).catch((err) => {console.log(`open config file error: ${err}`)})
         },
-        popOvers: popOvers
     })
+
+    //popover set
+    here.popover.set(popOvers)
 
     console.log('mini window setup ready...')
 
